@@ -4,8 +4,8 @@ def quick_sort(data, low, high) -> List[int]:
     # Write code here
     if low < high:
         p = partition(data, low, high)
-        quick_sort(data, low, p - 1)
-        quick_sort(data, p + 1, high)
+        data = quick_sort(data, low, p - 1)
+        data = quick_sort(data, p + 1, high)
     return data
 
 def partition(data, low, high):
