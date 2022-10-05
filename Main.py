@@ -14,7 +14,7 @@ def partition(data, low, high):
         i += 1
         data[i], data[j] = data[j], data[i]
     data[i + 1], data[high] = data[high], data[i + 1]
-    return data
+    return i + 1
     
 
 
