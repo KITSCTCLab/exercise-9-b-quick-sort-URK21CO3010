@@ -11,8 +11,9 @@ def quick_sort(data, low, high) -> List[int]:
 def partition(data, low, high):
     i = low - 1
     for j in range(low, high):
-        i += 1
-        data[i], data[j] = data[j], data[i]
+        if data[j] < data[r]:
+            i += 1
+            data[i], data[j] = data[j], data[i]
     data[i + 1], data[high] = data[high], data[i + 1]
     return i + 1
     
